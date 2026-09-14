@@ -4,14 +4,11 @@
 
 Product analytics demo: **bundle lift scoring** on synthetic commerce orders — support, confidence, and lift for SKU pairs, sliced by customer cohort.
 
-> **Honesty first**
->
-> - Educational demo only. **Synthetic** order/line-item data.
-> - **Not affiliated** with SpeciaList, Syncura, Expedia, Sysco, or any prior employer codebases.
-> - No fake revenue, MAU, or production merchant claims.
-> - Metrics on screen are computed from the seeded generator (fixed RNG) — reproducible, not “live traffic.”
+## Scope & honesty
 
-See [SPEC.md](./SPEC.md) for formula, scope, and architecture.
+Clean-room educational implementation using synthetic data. Reported metrics apply only to the included synthetic benchmark (seeded generator, fixed RNG).
+
+See [`PROVENANCE.md`](PROVENANCE.md) for affiliation notes. Formula and architecture: [`SPEC.md`](SPEC.md).
 
 ---
 
@@ -62,7 +59,7 @@ Open **http://localhost:5173**.
 
 1. Hit **http://localhost:8000/docs** (optional) — typed OpenAPI.
 2. `curl localhost:8000/health` and `/metrics` if you want ops flavor.
-3. Reminder: pending deployment; local demo is the source of truth today.
+3. Reminder: local demo is the source of truth today.
 
 ---
 

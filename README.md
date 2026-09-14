@@ -119,17 +119,17 @@ cd frontend && npm test -- --run
 
 ## Sample metrics (synthetic only)
 
-After seed (default ~2 000 orders, ~40 SKUs):
+From seed `42` (default 2 000 orders) — reproducible locally:
 
-| Metric | Typical range |
-|--------|----------------|
-| Orders | ~2 000 |
-| Distinct SKUs | ~40 |
-| Bundle pairs above min_support | dozens |
-| Top lift | often 2.0–5.0+ for planted affinity pairs |
+| Metric | Value |
+|--------|--------|
+| Orders | 2 000 |
+| Distinct SKUs | 40 |
+| Bundle pairs (min_support 0.02, min_lift 1.1) | 19 |
+| Example top lift | Dish Soap + Sponge Pack ≈ **3.81** |
 | Cohorts | 6 labeled segments |
 
-Exact numbers depend on seed version; check `/metrics` and the dashboard footer.
+Check `GET /metrics` and the dashboard footer after startup.
 
 ## License
 

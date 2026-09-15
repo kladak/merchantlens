@@ -1,4 +1,4 @@
-"""MerchantLens FastAPI entrypoint — synthetic product analytics demo."""
+"""MerchantLens FastAPI entrypoint."""
 
 from contextlib import asynccontextmanager
 
@@ -18,8 +18,7 @@ async def lifespan(_app: FastAPI):
 app = FastAPI(
     title="MerchantLens",
     description=(
-        "Educational product analytics demo with bundle lift scoring. "
-        "Synthetic commerce data only — not affiliated with any prior employer."
+        "Product analytics demo with bundle lift scoring. Synthetic commerce data only."
     ),
     version="0.1.0",
     lifespan=lifespan,

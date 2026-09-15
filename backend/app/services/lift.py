@@ -3,7 +3,7 @@
 lift(A→B) = P(A∩B) / (P(A) · P(B))
           = confidence(A→B) / support(B)
 
-Educational Apriori-style pairwise scorer — not a full frequent-itemset miner.
+Apriori-style pairwise scorer. Not a full frequent-itemset miner.
 """
 
 from __future__ import annotations

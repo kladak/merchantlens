@@ -1,20 +1,18 @@
 # MerchantLens
 
-**Karim Ladak · portfolio / educational project**
+Bundle lift scoring over generated commerce orders: support, confidence and lift for SKU pairs, sliced by customer cohort.
 
-Product analytics demo: **bundle lift scoring** on synthetic commerce orders — support, confidence, and lift for SKU pairs, sliced by customer cohort.
+## Data
 
-## Scope & honesty
-
-Clean-room educational implementation using synthetic data. Reported metrics apply only to the included synthetic benchmark (seeded generator, fixed RNG).
-
-See [`PROVENANCE.md`](PROVENANCE.md) for affiliation notes. Formula and architecture: [`SPEC.md`](SPEC.md).
+`backend/app/data/generator.py` builds 2 000 orders over 40 SKUs across six customer
+cohorts on a fixed RNG, so every number on screen reproduces run to run. Formula and
+architecture: [`SPEC.md`](SPEC.md).
 
 ---
 
-## Demo script (60–90s)
+## Running the demo
 
-Cold start — exact clicks for a recruiter walkthrough or screen recording.
+From a cold clone:
 
 ### 0. Prerequisites (once)
 
@@ -22,13 +20,13 @@ Cold start — exact clicks for a recruiter walkthrough or screen recording.
 git clone https://github.com/kladak/merchantlens.git
 cd merchantlens
 
-# Terminal A — API
+# Terminal A: API
 cd backend
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 uvicorn app.main:app --reload --port 8000
 
-# Terminal B — dashboard
+# Terminal B: dashboard
 cd frontend
 npm install
 npm run dev
@@ -38,10 +36,9 @@ Open **http://localhost:5173**.
 
 ### 1. Lift table (~30s)
 
-1. Read the disclaimer banner (synthetic data / educational).
-2. On **Bundles**, note ranked pairs with **Support / Confidence / Lift**.
-3. Point out a high-lift pair (e.g. coffee + filters) vs a popular-but-low-lift pair.
-4. Toggle **min lift** or **cohort** filter — table updates.
+1. On **Bundles**, note ranked pairs with **Support / Confidence / Lift**.
+2. Compare a high-lift pair (e.g. coffee + filters) against a popular but low-lift pair.
+3. Toggle the **min lift** or **cohort** filter and the table updates.
 
 ### 2. Product detail (~20s)
 
@@ -57,9 +54,9 @@ Open **http://localhost:5173**.
 
 ### 4. Close (~10s)
 
-1. Hit **http://localhost:8000/docs** (optional) — typed OpenAPI.
+1. Hit **http://localhost:8000/docs** for the typed OpenAPI surface.
 2. `curl localhost:8000/health` and `/metrics` if you want ops flavor.
-3. Reminder: local demo is the source of truth today.
+3. There is no hosted instance; the local run is the whole demo.
 
 ---
 
@@ -116,7 +113,7 @@ cd frontend && npm test -- --run
 
 ## Sample metrics (synthetic only)
 
-From seed `42` (default 2 000 orders) — reproducible locally:
+From seed `42` (default 2 000 orders), reproducible locally:
 
 | Metric | Value |
 |--------|--------|
@@ -130,4 +127,4 @@ Check `GET /metrics` and the dashboard footer after startup.
 
 ## License
 
-MIT — portfolio use. No warranty.
+MIT.

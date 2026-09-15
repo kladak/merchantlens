@@ -18,10 +18,10 @@ vi.mock('./api', () => ({
 }))
 
 describe('App', () => {
-  it('renders brand and disclaimer', async () => {
+  it('renders the brand and data note', async () => {
     render(<App />)
     expect(screen.getByText('MerchantLens')).toBeInTheDocument()
-    expect(screen.getByText(/Educational demo/i)).toBeInTheDocument()
+    expect(screen.getByText(/not live merchant traffic/i)).toBeInTheDocument()
     expect(screen.getByRole('button', { name: 'Bundles' })).toBeInTheDocument()
   })
 })

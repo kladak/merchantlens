@@ -1,1 +1,1 @@
-"""MerchantLens API — educational product analytics demo."""
+"""MerchantLens API: bundle lift analytics over generated orders."""

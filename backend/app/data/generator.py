@@ -1,6 +1,6 @@
 """Deterministic synthetic commerce seed for MerchantLens.
 
-Clean-room educational data only — not derived from any employer dataset.
+Seeded synthetic orders; a fixed RNG makes every downstream figure reproducible.
 """
 
 from __future__ import annotations

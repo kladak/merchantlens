@@ -99,7 +99,7 @@ export function BundleTable({ onSelectSku }: Props) {
       {loading && <LoadingState label="Scoring bundles" />}
       {!loading && error && <ErrorState message={error} />}
       {!loading && !error && pairs.length === 0 && (
-        <EmptyState label="No pairs above these thresholds — lower min support or lift." />
+        <EmptyState label="No pairs above these thresholds. Lower min support or lift." />
       )}
       {!loading && !error && pairs.length > 0 && (
         <div className="table-wrap">

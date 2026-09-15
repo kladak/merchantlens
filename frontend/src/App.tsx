@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { fetchReady } from './api'
 import { BundleTable } from './components/BundleTable'
 import { CohortsView } from './components/CohortsView'
-import { Disclaimer } from './components/Disclaimer'
+import { DataNote } from './components/DataNote'
 import { ProductsView } from './components/ProductsView'
 import './index.css'
 
@@ -31,7 +31,7 @@ export default function App() {
           <div className="brand-mark">ML</div>
           <div>
             <h1>MerchantLens</h1>
-            <p>Bundle lift scoring · Karim Ladak portfolio demo</p>
+            <p>Bundle lift scoring on synthetic commerce data</p>
           </div>
         </div>
         <nav className="nav" aria-label="Primary">
@@ -59,7 +59,7 @@ export default function App() {
         </nav>
       </header>
 
-      <Disclaimer />
+      <DataNote />
 
       {tab === 'bundles' && <BundleTable onSelectSku={openProduct} />}
       {tab === 'products' && (

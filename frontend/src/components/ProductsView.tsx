@@ -133,7 +133,7 @@ export function ProductsView({ selectedSku, onSelectSku }: Props) {
       <div className="panel-header">
         <div>
           <h2>Product catalog</h2>
-          <p>Synthetic SKUs — click for related lift pairs</p>
+          <p>Click a SKU for its related lift pairs</p>
         </div>
       </div>
       {loading && <LoadingState />}

@@ -43,7 +43,7 @@ export function CohortsView() {
                     style={{ width: `${((c.top_lift ?? 0) / maxLift) * 100}%` }}
                   />
                 </div>
-                <div>{c.top_lift != null ? <LiftBadge lift={c.top_lift} /> : '—'}</div>
+                <div>{c.top_lift != null ? <LiftBadge lift={c.top_lift} /> : '–'}</div>
               </div>
             ))}
           </div>
@@ -76,7 +76,7 @@ export function CohortsView() {
                     <td>{c.label}</td>
                     <td className="mono">{c.order_count}</td>
                     <td className="mono">{c.avg_basket_size.toFixed(2)}</td>
-                    <td>{c.top_pair ?? '—'}</td>
+                    <td>{c.top_pair ?? '–'}</td>
                   </tr>
                 ))}
               </tbody>
